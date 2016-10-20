@@ -16,6 +16,8 @@ The Sensors will go to sleep for the emittime and when they wake up they will ge
 
 The application is a simple command line application that has the ability to read a JSON config file to emulate devices. 
 A sample file looks like:
+
+```javascript
 {
 	"sensors" : [{
 			"id" : 0,
@@ -34,7 +36,7 @@ A sample file looks like:
   "name" : "Simulator", 
   "runtime" : 60000
 }
-
+```
 some key values:
   sensor
     mean: the mean value for the sensor to be simulated
