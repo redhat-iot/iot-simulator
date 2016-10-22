@@ -63,7 +63,14 @@ public class Simulator {
 		
 		Gson gson = new Gson();
 		try {
-			JsonReader reader = new JsonReader(new FileReader("d:/temp/config.json"));
+			String filename;
+			if(args.length == 1){
+				filename = (String) args[0];
+			}
+			else{
+				filename="d:/temp/config.json";
+			}
+			JsonReader reader = new JsonReader(new FileReader(filename));
 			Device devices = gson.fromJson(reader, Device.class);
 			System.out.println(devices);
 			ExecutorService executor = Executors.newFixedThreadPool(devices.getDevices());
