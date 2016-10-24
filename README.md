@@ -14,6 +14,22 @@ The Sensors will go to sleep for the emittime and when they wake up they will ge
 
 ## Installation
 
+The application can be build using the following command in the project directory:
+
+**mvn clean install**
+
+This command will create a target directory where you will find the following file:
+
+**iot-simulator-0.0.1-SNAPSHOT-jar-with-dependencies.jar**
+
+Launching the application is done in the target directory with the following command:
+
+**java -cp iot-simulator-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.redhat.iot.simulator.Simulator classes/iotSimulator.json**
+
+The **classes/iotSimulator.json** is the path to the configuration file
+
+## Application
+
 The application is a simple command line application that has the ability to read a JSON config file to emulate devices. 
 A sample file looks like:
 
